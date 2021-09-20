@@ -62,6 +62,7 @@
     <Compile Include="Concrete\Context.cs" />
     <Compile Include="Concrete\Repositories\CategoryRepository.cs" />
     <Compile Include="Concrete\Repositories\GenericRepository.cs" />
+    <Compile Include="EntityFramework\EfCategoryDal.cs" />
     <Compile Include="Migrations\202109201830014_ef.cs" />
     <Compile Include="Migrations\202109201830014_ef.designer.cs">
       <DependentUpon>202109201830014_ef.cs</DependentUpon>
@@ -73,9 +74,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="EntityFramework\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\EntityLayer\EntityLayer.csproj">
       <Project>{2E259AE8-2408-402A-BAD8-EA8AFAD3821F}</Project>
