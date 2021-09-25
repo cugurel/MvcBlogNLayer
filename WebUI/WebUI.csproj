@@ -5028,6 +5028,7 @@
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\AdminCateogory\Index.cshtml" />
     <Content Include="Views\AdminCateogory\CategoryAdd.cshtml" />
+    <Content Include="Views\AdminCateogory\CategoryUpdate.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

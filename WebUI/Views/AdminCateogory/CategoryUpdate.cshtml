@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "CategoryUpdate";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model EntityLayer.Concrete.Category
+@{
+    ViewBag.Title = "CategoryAdd";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-md-12 col-sm-12 ">
+    <div class="x_panel">
+        <div class="x_title">
+            <h2>Kategori Güncelle</h2>
+
+            <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+            <br />
+            @using (Html.BeginForm("CategoryUpdate", "AdminCateogory", FormMethod.Post))
+            {
+                @Html.TextBoxFor(x => x.CategoryId, new { @type = "hidden" })
+                <div class="item form-group">
+                    @Html.LabelFor(x => x.CategoryName, new { @class = "col-form-label col-md-3 col-sm-3 label-align" })
+                    <div class="col-md-6 col-sm-6 ">
+                        @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="item form-group">
+                    @Html.LabelFor(x => x.CategoryDescription, new { @class = "col-form-label col-md-3 col-sm-3 label-align" })
+                    <div class="col-md-6 col-sm-6 ">
+                        @Html.TextBoxFor(x => x.CategoryDescription, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="ln_solid"></div>
+                <div class="item form-group">
+                    <div class="col-md-6 col-sm-6 offset-md-3">
+                        <button type="submit" class="btn btn-success">Güncelle</button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+

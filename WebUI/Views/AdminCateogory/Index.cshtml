@@ -48,15 +48,15 @@
                             <td>@item.CategoryName</td>
                             <td>@item.CategoryDescription</td>
                             <td>@item.CategoryStatus</td>
-                            <td><a href="#" class="btn btn-outline-primary btn-sm">Başlıklar</a></td>
-                            <td><a href="#" class="btn btn-outline-success btn-sm">Güncelle</a></td>
-                            <td><a href="#" class="btn btn-outline-danger btn-sm">Sil</a></td>
+                            <td><a href="" class="btn btn-outline-primary btn-sm">Başlıklar</a></td>
+                            <td><a href="/AdminCateogory/CategoryUpdate/@item.CategoryId" class="btn btn-outline-success btn-sm">Güncelle</a></td>
+                            <td><a href="/AdminCateogory/CategoryDelete/@item.CategoryId" class="btn btn-outline-danger btn-sm">Sil</a></td>
                         </tr>
                     }
                 </tbody>
             </table>
 
-            <a href="CategoryAdd">Yeni Kategori Ekle</a>
+            <a href="/AdminCateogory/CategoryAdd" class="btn btn-outline-secondary">Yeni Kategori Ekle</a>
 
         </div>
     </div>

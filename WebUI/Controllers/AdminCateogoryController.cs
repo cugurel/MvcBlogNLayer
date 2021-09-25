@@ -47,5 +47,26 @@ namespace WebUI.Controllers
             }
             return View();
         }
+
+        public ActionResult CategoryDelete(int id)
+        {
+            var categoryToDelete = cm.GetById(id);
+            cm.CategoryDelete(categoryToDelete);
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public ActionResult CategoryUpdate(int id)
+        {
+            var categoryToUpdate = cm.GetById(id);
+            return View(categoryToUpdate);
+        }
+
+        [HttpPost]
+        public ActionResult CategoryUpdate(Category category)
+        {
+            cm.CategoryUpdate(category);
+            return RedirectToAction("Index");
+        }
     }
 }
