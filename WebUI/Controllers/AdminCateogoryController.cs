@@ -11,34 +11,36 @@ using System.Web.Mvc;
 
 namespace WebUI.Controllers
 {
-    public class AdminCategoryController : Controller
+    public class AdminCateogoryController : Controller
     {
-        readonly CategoryManager cm = new CategoryManager(new EfCategoryDal());
+        // GET: AdminCateogory
+
+        CategoryManager cm = new CategoryManager(new EfCategoryDal());
         public ActionResult Index()
         {
-            var categoryvalues = cm.GetCategoryList();
-            return View(categoryvalues);
+            var categoryList = cm.GetCategoryList();
+            return View(categoryList);
         }
-
+        
         [HttpGet]
-        public ActionResult AddCategory()
+        public ActionResult CategoryAdd()
         {
             return View();
         }
 
         [HttpPost]
-        public ActionResult AddCategory(Category ct)
+        public ActionResult CategoryAdd(Category ct)
         {
-            CategoryValidator categoryValidator = new CategoryValidator();
-            ValidationResult results = categoryValidator.Validate(ct);
-            if (results.IsValid)
+            CategoryValidator cv = new CategoryValidator();
+            ValidationResult result = cv.Validate(ct);
+            if (result.IsValid)
             {
                 cm.CategoryAdd(ct);
-                return RedirectToAction("Index");
+                return RedirectToAction("index");
             }
             else
             {
-                foreach (var item in results.Errors)
+                foreach (var item in result.Errors)
                 {
                     ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
                 }
