@@ -1,0 +1,62 @@
+﻿@model EntityLayer.Concrete.Writer
+@{
+    ViewBag.Title = "CategoryAdd";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-md-12 col-sm-12 ">
+    <div class="x_panel">
+        <div class="x_title">
+            <h2>Yazar Güncelle</h2>
+
+            <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+            <br />
+            @using (Html.BeginForm("UpdateWriter", "AdminWriter", FormMethod.Post))
+            {
+                @Html.TextBoxFor(x => x.WriterId, new { @type = "hidden" })
+                <div class="item form-group">
+                    @Html.LabelFor(x => x.WriterName, new { @class = "col-form-label col-md-3 col-sm-3 label-align" })
+                    <div class="col-md-6 col-sm-6 ">
+                        @Html.TextBoxFor(x => x.WriterName, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="item form-group">
+                    @Html.LabelFor(x => x.WriterSurname, new { @class = "col-form-label col-md-3 col-sm-3 label-align" })
+                    <div class="col-md-6 col-sm-6 ">
+                        @Html.TextBoxFor(x => x.WriterSurname, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="item form-group">
+                    @Html.LabelFor(x => x.WriterAbout, new { @class = "col-form-label col-md-3 col-sm-3 label-align" })
+                    <div class="col-md-6 col-sm-6 ">
+                        @Html.TextBoxFor(x => x.WriterAbout, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="item form-group">
+                    @Html.LabelFor(x => x.WriterMail, new { @class = "col-form-label col-md-3 col-sm-3 label-align" })
+                    <div class="col-md-6 col-sm-6 ">
+                        @Html.TextBoxFor(x => x.WriterMail, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="item form-group">
+                    @Html.LabelFor(x => x.WriterPassword, new { @class = "col-form-label col-md-3 col-sm-3 label-align" })
+                    <div class="col-md-6 col-sm-6 ">
+                        @Html.TextBoxFor(x => x.WriterPassword, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="ln_solid"></div>
+                <div class="item form-group">
+                    <div class="col-md-6 col-sm-6 offset-md-3">
+                        <button type="submit" class="btn btn-success">Güncelle</button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+

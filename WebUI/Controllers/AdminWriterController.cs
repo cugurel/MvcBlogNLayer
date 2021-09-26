@@ -27,7 +27,22 @@ namespace WebUI.Controllers
         [HttpPost]
         public ActionResult AddWriter(Writer writer)
         {
-            return View();
+            wm.WriterAdd(writer);
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public ActionResult UpdateWriter(int id)
+        {
+            var writervalue = wm.GetById(id);
+            return View(writervalue);
+        }
+
+        [HttpPost]
+        public ActionResult UpdateWriter(Writer writer)
+        {
+            wm.WriterUpdate(writer);
+            return RedirectToAction("Index");
         }
     }
 }

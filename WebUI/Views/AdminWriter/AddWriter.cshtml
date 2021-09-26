@@ -1,0 +1,69 @@
+﻿@model EntityLayer.Concrete.Writer
+@{
+    ViewBag.Title = "CategoryAdd";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-md-12 col-sm-12 ">
+    <div class="x_panel">
+        <div class="x_title">
+            <h2>Kategori Ekle</h2>
+
+            <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+            <br />
+            @using (Html.BeginForm("AddWriter", "AdminWriter", FormMethod.Post))
+            {
+                <div class="item form-group">
+                    @Html.LabelFor(x => x.WriterName, new { @class = "col-form-label col-md-3 col-sm-3 label-align" })
+                    <div class="col-md-6 col-sm-6 ">
+                        <input type="text" name="WriterName" value="" class="form-control" />
+                    </div>
+                </div>
+
+                <div class="item form-group">
+                    @Html.LabelFor(x => x.WriterSurname, new { @class = "col-form-label col-md-3 col-sm-3 label-align" })
+                    <div class="col-md-6 col-sm-6 ">
+                        <input type="text" name="WriterSurname" value="" class="form-control" />
+                    </div>
+                </div>
+
+                <div class="item form-group">
+                    @Html.LabelFor(x => x.WriterAbout, new { @class = "col-form-label col-md-3 col-sm-3 label-align" })
+                    <div class="col-md-6 col-sm-6 ">
+                        <input type="text" name="WriterAbout" value="" class="form-control" />
+                    </div>
+                </div>
+
+                <div class="item form-group">
+                    @Html.LabelFor(x => x.WriterMail, new { @class = "col-form-label col-md-3 col-sm-3 label-align" })
+                    <div class="col-md-6 col-sm-6 ">
+                        <input type="text" name="WriterMail" value="" class="form-control" />
+                    </div>
+                </div>
+
+
+                <div class="item form-group">
+                    @Html.LabelFor(x => x.WriterPassword, new { @class = "col-form-label col-md-3 col-sm-3 label-align" })
+                    <div class="col-md-6 col-sm-6 ">
+                        <input type="text" name="WriterPassword" value="" class="form-control" />
+                    </div>
+                </div>
+
+                <div class="item form-group">
+                    @Html.LabelFor(x => x.WriterImage, new { @class = "col-form-label col-md-3 col-sm-3 label-align" })
+                    <div class="col-md-6 col-sm-6 ">
+                        <input type="text" name="WriterImage" value="" class="form-control" />
+                    </div>
+                </div>
+                <div class="ln_solid"></div>
+                <div class="item form-group">
+                    <div class="col-md-6 col-sm-6 offset-md-3">
+                        <button type="submit" class="btn btn-success">Kaydet</button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
