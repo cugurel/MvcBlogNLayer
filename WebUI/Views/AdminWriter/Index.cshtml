@@ -1,0 +1,63 @@
+﻿@using EntityLayer.Concrete
+@model List<Writer>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-md-12 col-sm-12  ">
+    <div class="x_panel">
+        <div class="x_title">
+            <h2>Kategori Listesi</h2>
+            <ul class="nav navbar-right panel_toolbox">
+                <li>
+                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Settings 1</a>
+                        <a class="dropdown-item" href="#">Settings 2</a>
+                    </div>
+                </li>
+                <li>
+                    <a class="close-link"><i class="fa fa-close"></i></a>
+                </li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Yazar Adı</th>
+                        <th>Yazar Soyadı</th>
+                        <th>Yazar Maili</th>
+                        <th>Başlıklar</th>
+                        <th>Güncelle</th>
+                        <th>Sil</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <th>@item.WriterId</th>
+                            <td>@item.WriterName</td>
+                            <td>@item.WriterSurname</td>
+                            <td>@item.WriterMail</td>
+                            <td><a href="" class="btn btn-outline-primary btn-sm">Başlıklar</a></td>
+                            <td><a href="/AdminCateogory/CategoryUpdate/@item.WriterId" class="btn btn-outline-success btn-sm">Güncelle</a></td>
+                            <td><a href="/AdminCateogory/CategoryDelete/@item.WriterId" class="btn btn-outline-danger btn-sm">Sil</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+            <a href="/AdminCateogory/CategoryAdd" class="btn btn-outline-secondary">Yeni Kategori Ekle</a>
+
+        </div>
+    </div>
+</div>

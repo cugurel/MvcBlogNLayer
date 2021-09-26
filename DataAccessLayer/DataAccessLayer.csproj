@@ -63,9 +63,14 @@
     <Compile Include="Concrete\Repositories\CategoryRepository.cs" />
     <Compile Include="Concrete\Repositories\GenericRepository.cs" />
     <Compile Include="EntityFramework\EfCategoryDal.cs" />
+    <Compile Include="EntityFramework\EfWriterDal.cs" />
     <Compile Include="Migrations\202109201830014_ef.cs" />
     <Compile Include="Migrations\202109201830014_ef.designer.cs">
       <DependentUpon>202109201830014_ef.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109261216464_databasechange.cs" />
+    <Compile Include="Migrations\202109261216464_databasechange.designer.cs">
+      <DependentUpon>202109261216464_databasechange.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -84,6 +89,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202109201830014_ef.resx">
       <DependentUpon>202109201830014_ef.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109261216464_databasechange.resx">
+      <DependentUpon>202109261216464_databasechange.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

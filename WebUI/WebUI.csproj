@@ -133,6 +133,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminCateogoryController.cs" />
+    <Compile Include="Controllers\AdminWriterController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -5029,6 +5030,7 @@
     <Content Include="Views\AdminCateogory\Index.cshtml" />
     <Content Include="Views\AdminCateogory\CategoryAdd.cshtml" />
     <Content Include="Views\AdminCateogory\CategoryUpdate.cshtml" />
+    <Content Include="Views\AdminWriter\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

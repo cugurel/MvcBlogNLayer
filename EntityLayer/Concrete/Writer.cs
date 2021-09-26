@@ -13,8 +13,14 @@ namespace EntityLayer.Concrete
         public int WriterId { get; set; }
         public string WriterName { get; set; }
         public string WriterSurname { get; set; }
+
+        [StringLength(100)]
+        public string WriterAbout { get; set; }
         public string WriterImage { get; set; }
+
+        [StringLength(200)]
         public string WriterMail { get; set; }
+        [StringLength(200)]
         public string WriterPassword { get; set; }
 
         public ICollection<Heading> Headings { get; set; }
