@@ -34,6 +34,7 @@
                         <th>Id</th>
                         <th>Başlık</th>
                         <th>Kategori</th>
+                        <th>Yazılar</th>
                         <th>Güncelle</th>
                         <th>Sil</th>
                     </tr>
@@ -45,15 +46,14 @@
                             <th>@item.HeadingId</th>
                             <td>@item.HeadingName</td>
                             <td>@item.Category.CategoryName</td>
+                            <td><a href="/AdminHeading/UpdateWriter/@item.WriterId" class="btn btn-outline-success btn-sm">Yazılar</a></td>
                             <td><a href="/AdminHeading/UpdateWriter/@item.WriterId" class="btn btn-outline-success btn-sm">Güncelle</a></td>
                             <td><a href="/AdminWriter/WriterDelete/@item.WriterId" class="btn btn-outline-danger btn-sm">Sil</a></td>
                         </tr>
                     }
                 </tbody>
             </table>
-
-            <a href="/AdminHeading/AddHeading" class="btn btn-outline-secondary">Yeni Kategori Ekle</a>
-
+            <a href="/AdminHeading/AddHeading" class="btn btn-outline-secondary">Yeni Başlık Ekle</a>
         </div>
     </div>
 </div>

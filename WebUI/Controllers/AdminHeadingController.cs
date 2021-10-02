@@ -37,7 +37,7 @@ namespace WebUI.Controllers
             List<SelectListItem> valueWriter = (from x in wm.GetList()
                                                   select new SelectListItem
                                                   {
-                                                      Text = x.WriterName,
+                                                      Text = x.WriterName+" "+x.WriterSurname,
                                                       Value = x.WriterId.ToString()
                                                   }).ToList();
 

@@ -73,6 +73,10 @@
     <Compile Include="Migrations\202109261216464_databasechange.designer.cs">
       <DependentUpon>202109261216464_databasechange.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202110021347303_writer.cs" />
+    <Compile Include="Migrations\202110021347303_writer.designer.cs">
+      <DependentUpon>202110021347303_writer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -93,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202109261216464_databasechange.resx">
       <DependentUpon>202109261216464_databasechange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110021347303_writer.resx">
+      <DependentUpon>202110021347303_writer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
