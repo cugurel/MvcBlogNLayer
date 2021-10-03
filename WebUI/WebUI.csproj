@@ -135,6 +135,7 @@
     <Compile Include="Controllers\AdminCateogoryController.cs" />
     <Compile Include="Controllers\AdminHeadingController.cs" />
     <Compile Include="Controllers\AdminWriterController.cs" />
+    <Compile Include="Controllers\AdminContentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -5036,6 +5037,8 @@
     <Content Include="Views\AdminWriter\UpdateWriter.cshtml" />
     <Content Include="Views\AdminHeading\Index.cshtml" />
     <Content Include="Views\AdminHeading\AddHeading.cshtml" />
+    <Content Include="Views\AdminHeading\ContentByHeading.cshtml" />
+    <Content Include="Views\AdminContent\ContentByHeading.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -53,5 +53,7 @@ namespace WebUI.Controllers
             hm.HeadingAdd(heading);
             return RedirectToAction("Index");
         }
+
+        
     }
 }

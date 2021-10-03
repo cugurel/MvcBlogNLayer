@@ -77,6 +77,10 @@
     <Compile Include="Migrations\202110021347303_writer.designer.cs">
       <DependentUpon>202110021347303_writer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202110021353592_writerstatus.cs" />
+    <Compile Include="Migrations\202110021353592_writerstatus.designer.cs">
+      <DependentUpon>202110021353592_writerstatus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -100,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202110021347303_writer.resx">
       <DependentUpon>202110021347303_writer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110021353592_writerstatus.resx">
+      <DependentUpon>202110021353592_writerstatus.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
