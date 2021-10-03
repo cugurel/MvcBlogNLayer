@@ -1,0 +1,42 @@
+﻿@model EntityLayer.Concrete.Heading
+@{
+    ViewBag.Title = "EditHeading";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-md-12 col-sm-12 ">
+    <div class="x_panel">
+        <div class="x_title">
+            <h2>Başlık Güncelle</h2>
+            <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+            <br />
+            @using (Html.BeginForm("EditHeading", "AdminHeading", FormMethod.Post))
+            {
+                @Html.TextBoxFor(x=>x.HeadingId,new {@type="hidden" })
+                <div class="item form-group">
+                    @Html.Label("Başlık Adı", new { @class = "col-form-label col-md-3 col-sm-3 label-align" })
+                    <div class="col-md-6 col-sm-6 ">
+                        <input type="text" name="HeadingName" value="@Model.HeadingName" class="form-control" />
+                    </div>
+                </div>
+
+                <div class="item form-group">
+                    @Html.Label("Başlık Kategorisi", new { @class = "col-form-label col-md-3 col-sm-3 label-align" })
+                    <div class="col-md-6 col-sm-6 ">
+                        @Html.DropDownListFor(x=>x.CategoryId,(List<SelectListItem>)ViewBag.vlc, new { @class="form-control"})
+                    </div>
+                </div>
+                <div class="ln_solid"></div>
+                <div class="item form-group">
+                    <div class="col-md-6 col-sm-6 offset-md-3">
+                        <button type="submit" class="btn btn-success">Güncelle</button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+

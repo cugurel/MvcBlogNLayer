@@ -54,6 +54,22 @@ namespace WebUI.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpGet]
+        public ActionResult EditHeading(int id)
+        {
+            List<SelectListItem> valueCategory = (from x in cm.GetCategoryList()
+                                                  select new SelectListItem
+                                                  {
+                                                      Text = x.CategoryName,
+                                                      Value = x.CategoryId.ToString()
+                                                  }).ToList();
+
+            ViewBag.vlc = valueCategory;
+
+            var HeadingValue = hm.GetById(id);
+            return View(HeadingValue);
+        }
+
         
     }
 }

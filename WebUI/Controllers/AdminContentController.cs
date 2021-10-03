@@ -1,4 +1,7 @@
-﻿using System;
+﻿using BusinessLayer.Concrete;
+using DataAccessLayer.Abstract;
+using DataAccessLayer.EntityFramework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,15 +11,17 @@ namespace WebUI.Controllers
 {
     public class AdminContentController : Controller
     {
+        ContentManager cm = new ContentManager(new EfContentDal());
         // GET: Content
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult ContentByHeading()
+        public ActionResult ContentByHeading(int id)
         {
-            return View();
+            var contentValues = cm.GetListById(id);
+            return View(contentValues);
         }
     }
 }

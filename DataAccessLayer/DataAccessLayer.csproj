@@ -63,6 +63,7 @@
     <Compile Include="Concrete\Repositories\CategoryRepository.cs" />
     <Compile Include="Concrete\Repositories\GenericRepository.cs" />
     <Compile Include="EntityFramework\EfCategoryDal.cs" />
+    <Compile Include="EntityFramework\EfContentDal.cs" />
     <Compile Include="EntityFramework\EfHeadingDal.cs" />
     <Compile Include="EntityFramework\EfWriterDal.cs" />
     <Compile Include="Migrations\202109201830014_ef.cs" />
@@ -80,6 +81,14 @@
     <Compile Include="Migrations\202110021353592_writerstatus.cs" />
     <Compile Include="Migrations\202110021353592_writerstatus.designer.cs">
       <DependentUpon>202110021353592_writerstatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110031724471_contentstatus.cs" />
+    <Compile Include="Migrations\202110031724471_contentstatus.designer.cs">
+      <DependentUpon>202110031724471_contentstatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110031739020_headingStatus.cs" />
+    <Compile Include="Migrations\202110031739020_headingStatus.designer.cs">
+      <DependentUpon>202110031739020_headingStatus.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -107,6 +116,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202110021353592_writerstatus.resx">
       <DependentUpon>202110021353592_writerstatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110031724471_contentstatus.resx">
+      <DependentUpon>202110031724471_contentstatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110031739020_headingStatus.resx">
+      <DependentUpon>202110031739020_headingStatus.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
