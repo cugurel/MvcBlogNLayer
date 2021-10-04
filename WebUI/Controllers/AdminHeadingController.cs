@@ -80,7 +80,8 @@ namespace WebUI.Controllers
         public ActionResult DeleteHeading(int id)
         {
             var HeadingValue = hm.GetById(id);
-            hm.HeadingDelete(HeadingValue);
+            HeadingValue.HeadingStatus = false;
+            hm.HeadingUpdate(HeadingValue);
             return RedirectToAction("Index");
         }
         
