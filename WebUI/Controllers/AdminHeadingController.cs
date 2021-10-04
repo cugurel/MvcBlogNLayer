@@ -70,6 +70,19 @@ namespace WebUI.Controllers
             return View(HeadingValue);
         }
 
+        [HttpPost]
+        public ActionResult EditHeading(Heading heading)
+        {
+            hm.HeadingUpdate(heading);
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult DeleteHeading(int id)
+        {
+            var HeadingValue = hm.GetById(id);
+            hm.HeadingDelete(HeadingValue);
+            return RedirectToAction("Index");
+        }
         
     }
 }
